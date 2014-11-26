@@ -10,7 +10,6 @@ public class LoadGUI : MonoBehaviour {
 	void Start () {
 		x = Screen.width;
 		y = Screen.height;
-
 	}
 
 	void OnGUI() {
@@ -19,8 +18,11 @@ public class LoadGUI : MonoBehaviour {
 
 		// Draw main box
 		GUI.Box(new Rect((x/2) - 200, (y/2) - 250, 400, 400), "Fanorona!");
+        GUI.Label(new Rect((x / 2) - 198, (y / 2) + 130, 400, 400), "(C) David Stancu 2014");
+
 		if (GUI.Button(new Rect((x/2) - 175, (y/2) - 125, 350, 50), "Play 3x3"))
 		{
+            Debug.Log("Loading 3x3 board.");
 			Application.LoadLevel("3x3");
 		}
 		if (GUI.Button(new Rect((x/2) - 175, (y/2) - 50, 350, 50), "Play 5x5"))
