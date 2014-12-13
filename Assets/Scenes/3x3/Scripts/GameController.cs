@@ -96,6 +96,35 @@ public class GameController : MonoBehaviour {
             }
             board[2, i] = point;
         }
+
+		// Add pieces to board
+		for (int i = 0; i < board.GetLength(0); ++i) {
+			var piece = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+			piece.name = "Piece";
+			piece.transform.rotation = Quaternion.Euler(90f, 0f, 0f);
+			piece.renderer.material.color = Color.black;
+			piece.transform.position = board[0,i].transform.position;
+		}
+
+		for (int i = 0; i < board.GetLength(0); ++i) {
+			var piece = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+			piece.name = "Piece";
+			piece.transform.rotation = Quaternion.Euler(90f, 0f, 0f);
+			piece.renderer.material.color = Color.white;
+			piece.transform.position = board[2,i].transform.position;
+		}
+
+		var pieceL = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+		pieceL.name = "Piece";
+		pieceL.transform.rotation = Quaternion.Euler(90f, 0f, 0f);
+		pieceL.renderer.material.color = Color.black;
+		pieceL.transform.position = board[1,0].transform.position;
+
+		var pieceR = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+		pieceR.name = "Piece";
+		pieceR.transform.rotation = Quaternion.Euler(90f, 0f, 0f);
+		pieceR.renderer.material.color = Color.white;
+		pieceR.transform.position = board[1,2].transform.position;
 	}
 
     void OnGUI()
