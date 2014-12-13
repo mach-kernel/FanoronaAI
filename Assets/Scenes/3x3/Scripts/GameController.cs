@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class GameController : MonoBehaviour {
 
-	public enum PT {WHITE, BLACK}
+	public enum PT {WHITE, BLACK, UNCHOSEN}
 
     /// <summary>
     /// Basic position struct since Mono/Unity 
@@ -21,6 +21,16 @@ public class GameController : MonoBehaviour {
         }
     }
 
+    // Stats labels
+    public string curTurnL = "n/a";
+    public int turnCount = 0;
+
+    // Turn logic
+    public PT humanPlayer = PT.UNCHOSEN;
+    public PT currentTurn = PT.WHITE;
+    public bool turnInProgress = false;
+
+    // Board logic
 	public GameObject[,] board = new GameObject[3,3];
 	public bool isPieceSelected = false;
     public GameObject selectedPiece;
@@ -411,11 +421,52 @@ public class GameController : MonoBehaviour {
         clearSelect();
     }
 
+    void playAI()
+    {
+        // Choose random piece
+        int randX = Random.Range(0, 2);
+        int randY = Random.Range(0, 2);
+
+        // Select it
+        var pscr = (Piece)((Position)board[randY, randX].GetComponent("Position")).gamePiece.GetComponent("Piece");
+        pscr.select();
+
+        // Check for valid moves
+        for (int y = 0; y < 3; ++y)
+        {
+            for (int x = 0; x < 3; ++x)
+            {
+
+            }
+        }
+    }
+
     void OnGUI()
     {
+        if (humanPlayer == PT.UNCHOSEN)
+        {
+            GUI.Box(new Rect((Screen.width / 2) - 100, (Screen.height / 2) - 100, 200, 125), "Choose Color");
+            if (GUI.Button(new Rect((Screen.width / 2) - 75, (Screen.height / 2) - 65, 150, 25), "Black"))
+            {
+                humanPlayer = PT.BLACK;
+                Debug.Log("Human chooses black.");
+            }
+            if (GUI.Button(new Rect((Screen.width / 2) - 75, (Screen.height / 2) - 25, 150, 25), "White"))
+            {
+                humanPlayer = PT.WHITE;
+                Debug.Log("Human chooses white.");
+            }
+        }
+
+        GUI.Box(new Rect(10, (Screen.height / 2) - 100, 200, 75), "Stats");
+        GUI.Label(new Rect(15, (Screen.height / 2) - 80, 200, 125), "Current Turn:");
+        GUI.Label(new Rect(100, (Screen.height / 2) - 80, 200, 125), curTurnL);
+
+        GUI.Label(new Rect(15, (Screen.height / 2) - 60, 200, 125), "Total turns:");
+        GUI.Label(new Rect(100, (Screen.height / 2) - 60, 200, 125), turnCount.ToString());
+
         if (GUI.Button(new Rect(10f, 10f, 65f, 25f), "← Back"))
         {
-            Debug.Log("Loading 3x3 board.");
             Application.LoadLevel("StartGUI");
         }
     }
@@ -424,9 +475,17 @@ public class GameController : MonoBehaviour {
 	void Update () 
     {
         // Deselect pieces
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && currentTurn == humanPlayer)
         {
             clearSelect();
+        }
+
+        curTurnL = humanPlayer == currentTurn ? "Human" : "Computer";
+
+        if ((currentTurn != humanPlayer) && !turnInProgress)
+        {
+            turnInProgress = true;
+            playAI();
         }
 			
 	}
