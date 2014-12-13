@@ -335,7 +335,8 @@ public class GameController : MonoBehaviour {
         if ((fromp.x - top.x > 0) && (fromp.y - top.y > 0))
         {
             int ty = top.y, tx = top.x;
-            while (ty > 0 && tx > 0)
+            int ry = top.y, rx = top.x;
+            while (ty >= 0 && tx >= 0)
             {
                 var csc = (Position)board[ty, tx].GetComponent("Position");
                 if (csc.gamePiece)
@@ -351,9 +352,9 @@ public class GameController : MonoBehaviour {
                 --ty;
                 --tx;
             }
-            while (tx < 3 && ty < 3)
+            while (rx <= 2 && ry <= 2)
             {
-                var csc = (Position)board[ty, tx].GetComponent("Position");
+                var csc = (Position)board[ry, rx].GetComponent("Position");
                 if (csc.gamePiece)
                 {
                     var cscGPC = (Piece)csc.gamePiece.GetComponent("Piece");
@@ -364,14 +365,15 @@ public class GameController : MonoBehaviour {
                         csc.gamePiece = null;
                     }
                 }
-                ++ty;
-                ++tx;
+                ++ry;
+                ++rx;
             }
         }
         if ((fromp.x - top.x > 0) && (fromp.y - top.y < 0) || (fromp.x - top.x < 0) && (fromp.y - top.y > 0))
         {
             int ty = top.y, tx = top.x;
-            while (ty > 0 && tx > 0)
+            int ry = top.y, rx = top.x;
+            while (ty >= 0 && tx >= 0)
             {
                 var csc = (Position)board[ty, tx].GetComponent("Position");
                 if (csc.gamePiece)
@@ -387,9 +389,9 @@ public class GameController : MonoBehaviour {
                 --ty;
                 ++tx;
             }
-            while (tx < 3 && ty < 3)
+            while (ry <= 2 && rx <= 2)
             {
-                var csc = (Position)board[ty, tx].GetComponent("Position");
+                var csc = (Position)board[ry, rx].GetComponent("Position");
                 if (csc.gamePiece)
                 {
                     var cscGPC = (Piece)csc.gamePiece.GetComponent("Piece");
@@ -400,8 +402,8 @@ public class GameController : MonoBehaviour {
                         csc.gamePiece = null;
                     }
                 }
-                ++ty;
-                --tx;
+                ++ry;
+                --rx;
             }
         }
         //// END CAPTURE
