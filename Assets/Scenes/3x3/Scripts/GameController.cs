@@ -6,6 +6,10 @@ public class GameController : MonoBehaviour {
 
 	public enum PT {WHITE, BLACK}
 
+    /// <summary>
+    /// Basic position struct since Mono/Unity 
+    /// lacks support for tuples
+    /// </summary>
     public struct Pos
     {
         public int x;
@@ -19,8 +23,14 @@ public class GameController : MonoBehaviour {
 
 	public GameObject[,] board = new GameObject[3,3];
 	public bool isPieceSelected = false;
+    public GameObject selectedPiece;
 
-	// Use this for initialization
+	/// <summary>
+	/// Responsible for rendering board positions
+    /// onto screen, as well as GUI components and 
+    /// initial piece placement. Also prompts user for which
+    /// color they would like to be. 
+	/// </summary>
 	void Start () 
     {
         Debug.Log("3x3: Initializing assets and drawing board.");
@@ -161,6 +171,9 @@ public class GameController : MonoBehaviour {
 
 	}
 
+    /// <summary>
+    /// Highlights all valid move spaces with the color Magenta
+    /// </summary>
     public void showValidMoves()
     {
         Pos p = new Pos(-1, -1);
@@ -221,6 +234,181 @@ public class GameController : MonoBehaviour {
         // END HIGHLIGHT VALID SPACES
     }
 
+    /// <summary>
+    /// Clears selection and validity paths.
+    /// </summary>
+    public void clearSelect()
+    {
+        isPieceSelected = false;
+        selectedPiece = null;
+        for (int y = 0; y < 3; ++y)
+        {
+            for (int x = 0; x < 3; ++x)
+            {
+                board[y, x].renderer.material.color = Color.black;
+                var sc = (Position)board[y, x].GetComponent("Position");
+                if (sc.gamePiece)
+                {
+                    sc.gamePiece.renderer.material.color = ((Piece)sc.gamePiece.GetComponent("Piece")).pieceType == 0 ? Color.white : Color.black;
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// Moves selected object from one valid space to the other,
+    /// and completes any capture if applicable. 
+    /// </summary>
+    /// <param name="to">Destination position</param>
+    public void doMove(GameObject to)
+    {
+        Pos fromp = new Pos();
+        Pos top = new Pos();
+
+        //// BEGIN MOVEMENT
+        for (int y = 0; y < 3; ++y)
+        {
+            for (int x = 0; x < 3; ++x)
+            {
+                if (board[y,x].transform.position == selectedPiece.transform.position)
+                {
+                    var fromsc = (Position)board[y, x].GetComponent("Position");
+                    fromsc.gamePiece = null;
+                    fromp.x = x;
+                    fromp.y = y;
+                }
+            }
+        }
+
+        selectedPiece.transform.position = to.transform.position;
+        var tosc = (Position)to.GetComponent("Position");
+        tosc.gamePiece = selectedPiece;
+
+        for (int y = 0; y < 3; ++y)
+        {
+            for (int x = 0; x < 3; ++x)
+            {
+                if (board[y, x].transform.position == selectedPiece.transform.position)
+                {
+                    top.x = x;
+                    top.y = y;
+                }
+            }
+        }
+        //// END MOVEMENT
+
+        //// BEGIN CAPTURE
+        if (fromp.y - top.y == 0)
+        {
+            for (int i = 0; i < 3; ++i)
+            {
+                var csc = (Position)board[top.y,i].GetComponent("Position");
+                if (csc.gamePiece)
+                {
+                    var cscGPC = (Piece)csc.gamePiece.GetComponent("Piece");
+                    var gpGPC = (Piece)selectedPiece.GetComponent("Piece");
+                    if (cscGPC.pieceType != gpGPC.pieceType)
+                    {
+                        Destroy(csc.gamePiece);
+                        csc.gamePiece = null;
+                    }
+                }
+            }
+        }
+        if (fromp.x - top.x == 0)
+        {
+            for (int i = 0; i < 3; ++i)
+            {
+                var csc = (Position)board[i, top.x].GetComponent("Position");
+                if (csc.gamePiece)
+                {
+                    var cscGPC = (Piece)csc.gamePiece.GetComponent("Piece");
+                    var gpGPC = (Piece)selectedPiece.GetComponent("Piece");
+                    if (cscGPC.pieceType != gpGPC.pieceType)
+                    {
+                        Destroy(csc.gamePiece);
+                        csc.gamePiece = null;
+                    }
+                }
+            }
+        }
+        if ((fromp.x - top.x > 0) && (fromp.y - top.y > 0))
+        {
+            int ty = top.y, tx = top.x;
+            while (ty > 0 && tx > 0)
+            {
+                var csc = (Position)board[ty, tx].GetComponent("Position");
+                if (csc.gamePiece)
+                {
+                    var cscGPC = (Piece)csc.gamePiece.GetComponent("Piece");
+                    var gpGPC = (Piece)selectedPiece.GetComponent("Piece");
+                    if (cscGPC.pieceType != gpGPC.pieceType)
+                    {
+                        Destroy(csc.gamePiece);
+                        csc.gamePiece = null;
+                    }
+                }
+                --ty;
+                --tx;
+            }
+            while (tx < 3 && ty < 3)
+            {
+                var csc = (Position)board[ty, tx].GetComponent("Position");
+                if (csc.gamePiece)
+                {
+                    var cscGPC = (Piece)csc.gamePiece.GetComponent("Piece");
+                    var gpGPC = (Piece)selectedPiece.GetComponent("Piece");
+                    if (cscGPC.pieceType != gpGPC.pieceType)
+                    {
+                        Destroy(csc.gamePiece);
+                        csc.gamePiece = null;
+                    }
+                }
+                ++ty;
+                ++tx;
+            }
+        }
+        if ((fromp.x - top.x > 0) && (fromp.y - top.y < 0) || (fromp.x - top.x < 0) && (fromp.y - top.y > 0))
+        {
+            int ty = top.y, tx = top.x;
+            while (ty > 0 && tx > 0)
+            {
+                var csc = (Position)board[ty, tx].GetComponent("Position");
+                if (csc.gamePiece)
+                {
+                    var cscGPC = (Piece)csc.gamePiece.GetComponent("Piece");
+                    var gpGPC = (Piece)selectedPiece.GetComponent("Piece");
+                    if (cscGPC.pieceType != gpGPC.pieceType)
+                    {
+                        Destroy(csc.gamePiece);
+                        csc.gamePiece = null;
+                    }
+                }
+                --ty;
+                ++tx;
+            }
+            while (tx < 3 && ty < 3)
+            {
+                var csc = (Position)board[ty, tx].GetComponent("Position");
+                if (csc.gamePiece)
+                {
+                    var cscGPC = (Piece)csc.gamePiece.GetComponent("Piece");
+                    var gpGPC = (Piece)selectedPiece.GetComponent("Piece");
+                    if (cscGPC.pieceType != gpGPC.pieceType)
+                    {
+                        Destroy(csc.gamePiece);
+                        csc.gamePiece = null;
+                    }
+                }
+                ++ty;
+                --tx;
+            }
+        }
+        //// END CAPTURE
+
+        clearSelect();
+    }
+
     void OnGUI()
     {
         if (GUI.Button(new Rect(10f, 10f, 65f, 25f), "← Back"))
@@ -236,19 +424,7 @@ public class GameController : MonoBehaviour {
         // Deselect pieces
         if (Input.GetMouseButtonDown(1))
         {
-            isPieceSelected = false;
-            for (int y = 0; y < 3; ++y)
-            {
-                for (int x = 0; x < 3; ++x)
-                {
-                    board[y, x].renderer.material.color = Color.black;
-                    var sc = (Position)board[y, x].GetComponent("Position");
-                    if (sc.gamePiece) 
-                    {
-                        sc.gamePiece.renderer.material.color = ((Piece)sc.gamePiece.GetComponent("Piece")).pieceType == 0 ? Color.white : Color.black;
-                    }
-                }
-            }
+            clearSelect();
         }
 			
 	}
