@@ -332,7 +332,7 @@ public class GameController : MonoBehaviour {
                 }
             }
         }
-        if ((fromp.x - top.x > 0) && (fromp.y - top.y > 0))
+        if ((fromp.x - top.x > 0) && (fromp.y - top.y > 0) || (fromp.x - top.x < 0) && (fromp.y - top.y < 0))
         {
             int ty = top.y, tx = top.x;
             int ry = top.y, rx = top.x;
