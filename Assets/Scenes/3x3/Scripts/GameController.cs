@@ -156,7 +156,7 @@ public class GameController : MonoBehaviour {
 		pieceR.AddComponent("Piece");
 
         Position scR = (Position)board[1, 2].GetComponent("Position");
-        scR.gamePiece = pieceL;
+        scR.gamePiece = pieceR;
 		//// END ADD PIECES TO BOARD
 
 	}
@@ -185,7 +185,7 @@ public class GameController : MonoBehaviour {
             // Lose condition
         }
 
-        // Highlight valid spaces
+        // START HIGHLIGHT VALID SPACES
         if (p.y > 0 && !((Position)board[p.y - 1, p.x].GetComponent("Position")).gamePiece)
         {
             board[p.y - 1, p.x].renderer.material.color = Color.magenta;
@@ -218,6 +218,7 @@ public class GameController : MonoBehaviour {
         {
             board[p.y + 1, p.x + 1].renderer.material.color = Color.magenta;
         }
+        // END HIGHLIGHT VALID SPACES
     }
 
     void OnGUI()
@@ -228,12 +229,10 @@ public class GameController : MonoBehaviour {
             Application.LoadLevel("StartGUI");
         }
     }
-
-	//List<Time> showValidMoves();
 	
 	// Update is called once per frame
-	void Update () {
-
+	void Update () 
+    {
         // Deselect pieces
         if (Input.GetMouseButtonDown(1))
         {
