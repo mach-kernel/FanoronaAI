@@ -10,8 +10,8 @@ Platform assembly: C:\Users\David\Documents\GitHub\FanoronaAI\Builds\Test\test_D
 Loading C:\Users\David\Documents\GitHub\FanoronaAI\Builds\Test\test_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\Users\David\Documents\GitHub\FanoronaAI\Builds\Test\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\Users\David\Documents\GitHub\FanoronaAI\Builds\Test\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.304 seconds
-desktop: 1600x900 50Hz; virtual: 1600x900 at 0,0
+- Completed reload, in  0.228 seconds
+desktop: 2560x1440 59Hz; virtual: 4160x1568 at -1600,0
 <RI> Initializing input.
 <RI> Input initialized.
 Loading 3x3 board.
@@ -21,56 +21,20 @@ LoadGUI:OnGUI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\Sta
  
 (Filename: C Line: 0)
 
-UnloadTime: 1.004977 ms
+UnloadTime: 1.050552 ms
 System memory in use before: 22.5 MB.
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 System memory in use after: 22.4 MB.
 
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 120.
-Total: 3.801507 ms (FindLiveObjects: 0.022168 ms CreateObjectMapping: 0.022579 ms MarkObjects: 0.426540 ms  DeleteObjects: 0.022579 ms)
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 122.
+Total: 5.437502 ms (FindLiveObjects: 0.029147 ms CreateObjectMapping: 0.034895 ms MarkObjects: 0.619493 ms  DeleteObjects: 0.032432 ms)
 
 3x3: Initializing assets and drawing board.
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-GameController:Start() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:12)
+GameController:Start() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:15)
  
 (Filename: C Line: 0)
 
-Loading 3x3 board.
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:OnGUI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:105)
- 
-(Filename: C Line: 0)
-
-UnloadTime: 2.195103 ms
-System memory in use before: 22.4 MB.
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-System memory in use after: 22.3 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 100.
-Total: 3.817517 ms (FindLiveObjects: 0.035305 ms CreateObjectMapping: 0.040231 ms MarkObjects: 0.465130 ms  DeleteObjects: 0.411350 ms)
-
-Loading 3x3 board.
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-LoadGUI:OnGUI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\StartGUI\Scripts\LoadGUI.cs:25)
- 
-(Filename: C Line: 0)
-
-UnloadTime: 0.907271 ms
-System memory in use before: 22.5 MB.
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-System memory in use after: 22.4 MB.
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 121.
-Total: 4.560166 ms (FindLiveObjects: 0.032842 ms CreateObjectMapping: 0.036537 ms MarkObjects: 0.611279 ms  DeleteObjects: 0.028326 ms)
-
-3x3: Initializing assets and drawing board.
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:Start() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:12)
- 
-(Filename: C Line: 0)
-
+Platform assembly: C:\Users\David\Documents\GitHub\FanoronaAI\Builds\Test\test_Data\Managed\System.dll (this message is harmless)
 Waiting for finish
