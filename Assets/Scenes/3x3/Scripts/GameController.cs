@@ -183,6 +183,11 @@ public class GameController : MonoBehaviour {
 
 	}
 
+    public bool isOccupied (GameObject position)
+    {
+        return (((Position)position.GetComponent("Position")).gamePiece) ? true : false;
+    }
+
     /// <summary>
     /// Highlights all valid move spaces with the color Magenta
     /// </summary>
@@ -206,38 +211,184 @@ public class GameController : MonoBehaviour {
         Debug.Log("Selected piece is " + p.y + ", " + p.x);
 
         // START HIGHLIGHT VALID SPACES
-        if (p.y > 0 && !((Position)board[p.y - 1, p.x].GetComponent("Position")).gamePiece)
+        bool captureHighlight = false;
+        if (p.y > 0 && !isOccupied(board[p.y - 1, p.x]))
         {
-            board[p.y - 1, p.x].renderer.material.color = Color.magenta;
-            if (!willCapture(board[p.y - 1, p.x]) board[p.y - 1, p.x].renderer.material.color = Color.black;
+            if (willCapture(board[p.y - 1, p.x]))
+            {
+                board[p.y - 1, p.x].renderer.material.color = Color.magenta;
+                captureHighlight = true;
+            }
         }
-        if (p.y < 2 && !((Position)board[p.y + 1, p.x].GetComponent("Position")).gamePiece)
+        if (p.y < 2 && !isOccupied(board[p.y + 1, p.x]))
         {
-            board[p.y + 1, p.x].renderer.material.color = Color.magenta;
+            if (willCapture(board[p.y + 1, p.x]))
+            {
+                board[p.y + 1, p.x].renderer.material.color = Color.magenta;
+                captureHighlight = true;
+            }
         }
-        if (p.x > 0 && !((Position)board[p.y, p.x - 1].GetComponent("Position")).gamePiece)
+        if (p.x > 0 && !isOccupied(board[p.y, p.x - 1]))
         {
-            board[p.y, p.x - 1].renderer.material.color = Color.magenta;
+            if (willCapture(board[p.y, p.x - 1]))
+            {
+                board[p.y, p.x - 1].renderer.material.color = Color.magenta;
+                captureHighlight = true;
+            }
         }
-        if (p.x < 2 && !((Position)board[p.y, p.x + 1].GetComponent("Position")).gamePiece)
+        if (p.x < 2 && !isOccupied(board[p.y, p.x + 1]))
         {
-            board[p.y, p.x + 1].renderer.material.color = Color.magenta;
+            if (willCapture(board[p.y, p.x + 1]))
+            {
+                board[p.y, p.x + 1].renderer.material.color = Color.magenta;
+                captureHighlight = true;
+            }
         }
-        if ((p.x > 0 && p.y > 0) && !((Position)board[p.y - 1, p.x - 1].GetComponent("Position")).gamePiece)
+        if ((p.x > 0 && p.y > 0) && !isOccupied(board[p.y - 1, p.x - 1]))
         {
-            board[p.y - 1, p.x - 1].renderer.material.color = Color.magenta;
+            if (willCapture(board[p.y - 1, p.x - 1]))
+            {
+                board[p.y - 1, p.x - 1].renderer.material.color = Color.magenta;
+                captureHighlight = true;
+            }
         }
-        if ((p.x > 0 && p.y < 2) && !((Position)board[p.y + 1, p.x - 1].GetComponent("Position")).gamePiece)
+        if ((p.x > 0 && p.y < 2) && !isOccupied(board[p.y + 1, p.x - 1]))
         {
-            board[p.y + 1, p.x - 1].renderer.material.color = Color.magenta;
+            if (willCapture(board[p.y + 1, p.x - 1]))
+            {
+                board[p.y + 1, p.x - 1].renderer.material.color = Color.magenta;
+                captureHighlight = true;
+            }
         }
-        if ((p.x < 2 && p.y > 0) && !((Position)board[p.y - 1, p.x + 1].GetComponent("Position")).gamePiece)
+        if ((p.x < 2 && p.y > 0) && !isOccupied(board[p.y - 1, p.x + 1]))
         {
-            board[p.y - 1, p.x + 1].renderer.material.color = Color.magenta;
+            if (willCapture(board[p.y - 1, p.x + 1]))
+            {
+                board[p.y - 1, p.x + 1].renderer.material.color = Color.magenta;
+                captureHighlight = true;
+            }
         }
-        if ((p.x < 2 && p.y < 2) && !((Position)board[p.y + 1, p.x + 1].GetComponent("Position")).gamePiece)
+        if ((p.x < 2 && p.y < 2) && !isOccupied(board[p.y + 1, p.x + 1]))
         {
-            board[p.y + 1, p.x + 1].renderer.material.color = Color.magenta;
+            if (willCapture(board[p.y + 1, p.x + 1]))
+            {
+                board[p.y + 1, p.x + 1].renderer.material.color = Color.magenta;
+                captureHighlight = true;
+            }
+        }
+
+        if (!captureHighlight)
+        {
+            // Check to see if other pieces can capture
+            for (int y = 0; y < 3; ++y)
+            {
+                for (int x=0; x<3; ++x)
+                {
+                    var poscr = (Position)board[y, x].GetComponent("Position");
+                    if (poscr.gamePiece)
+                    {
+                        var piscr = (Piece)poscr.gamePiece.GetComponent("Piece");
+                        var selPiece = (Piece)selectedPiece.GetComponent("Piece");
+                        if (piscr.pieceType == selPiece.pieceType)
+                        {
+                            Pos op = new Pos(x, y);
+
+                            // START HIGHLIGHT VALID SPACES
+                            bool otherCapture = false;
+                            if (op.y > 0 && !isOccupied(board[op.y - 1, op.x]))
+                            {
+                                if (willCapture(board[op.y - 1, op.x]))
+                                {
+                                    otherCapture = true;
+                                }
+                            }
+                            if (op.y < 2 && !isOccupied(board[op.y + 1, op.x]))
+                            {
+                                if (willCapture(board[op.y + 1, op.x]))
+                                {
+                                    otherCapture = true;
+                                }
+                            }
+                            if (op.x > 0 && !isOccupied(board[op.y, op.x - 1]))
+                            {
+                                if (willCapture(board[op.y, op.x - 1]))
+                                {
+                                    otherCapture = true;
+                                }
+                            }
+                            if (op.x < 2 && !isOccupied(board[op.y, op.x + 1]))
+                            {
+                                if (willCapture(board[op.y, op.x + 1]))
+                                {
+                                    otherCapture = true;
+                                }
+                            }
+                            if ((op.x > 0 && op.y > 0) && !isOccupied(board[op.y - 1, op.x - 1]))
+                            {
+                                if (willCapture(board[op.y - 1, op.x - 1]))
+                                {
+                                    otherCapture = true;
+                                }
+                            }
+                            if ((op.x > 0 && op.y < 2) && !isOccupied(board[op.y + 1, op.x - 1]))
+                            {
+                                if (willCapture(board[op.y + 1, op.x - 1]))
+                                {
+                                    otherCapture = true;
+                                }
+                            }
+                            if ((op.x < 2 && op.y > 0) && !isOccupied(board[op.y - 1, op.x + 1]))
+                            {
+                                if (willCapture(board[op.y - 1, op.x + 1]))
+                                {
+                                    otherCapture = true;
+                                }
+                            }
+                            if ((op.x < 2 && op.y < 2) && !isOccupied(board[op.y + 1, op.x + 1]))
+                            {
+                                if (willCapture(board[op.y + 1, op.x + 1]))
+                                {
+                                    otherCapture = true;
+                                }
+                            }
+                            if (otherCapture) return;
+                        }
+
+                    }
+                }
+            }
+            if (p.y > 0 && !isOccupied(board[p.y - 1, p.x]))
+            {
+                board[p.y - 1, p.x].renderer.material.color = Color.magenta;
+            }
+            if (p.y < 2 && !isOccupied(board[p.y + 1, p.x]))
+            {
+                board[p.y + 1, p.x].renderer.material.color = Color.magenta;
+            }
+            if (p.x > 0 && !isOccupied(board[p.y, p.x - 1]))
+            {
+                board[p.y, p.x - 1].renderer.material.color = Color.magenta;
+            }
+            if (p.x < 2 && !isOccupied(board[p.y, p.x + 1]))
+            {
+                board[p.y, p.x + 1].renderer.material.color = Color.magenta;
+            }
+            if ((p.x > 0 && p.y > 0) && !isOccupied(board[p.y - 1, p.x - 1]))
+            {
+                board[p.y - 1, p.x - 1].renderer.material.color = Color.magenta;
+            }
+            if ((p.x > 0 && p.y < 2) && !isOccupied(board[p.y + 1, p.x - 1]))
+            {
+                board[p.y + 1, p.x - 1].renderer.material.color = Color.magenta;
+            }
+            if ((p.x < 2 && p.y > 0) && !isOccupied(board[p.y - 1, p.x + 1]))
+            {
+                board[p.y - 1, p.x + 1].renderer.material.color = Color.magenta;
+            }
+            if ((p.x < 2 && p.y < 2) && !isOccupied(board[p.y + 1, p.x + 1]))
+            {
+                board[p.y + 1, p.x + 1].renderer.material.color = Color.magenta;
+            }
         }
         // END HIGHLIGHT VALID SPACES
     }
@@ -309,7 +460,7 @@ public class GameController : MonoBehaviour {
 
         bool didCapture = false;
 
-        if (fromp.y - top.y == 0)
+        if (fromp.y - top.y == 0 && Mathf.Abs(fromp.x - top.x) == 1)
         {
             for (int i = 0; i < 3; ++i)
             {
@@ -333,7 +484,7 @@ public class GameController : MonoBehaviour {
                 }
             }
         }
-        if (fromp.x - top.x == 0)
+        if (fromp.x - top.x == 0 && Mathf.Abs(fromp.y - top.y) == 1)
         {
             for (int i = 0; i < 3; ++i)
             {
@@ -478,7 +629,7 @@ public class GameController : MonoBehaviour {
         Pos fromp = new Pos();
         Pos top = new Pos();
 
-        //// BEGIN MOVEMENT
+        //// BEGIN DETECT
         for (int y = 0; y < 3; ++y)
         {
             for (int x = 0; x < 3; ++x)
@@ -503,13 +654,13 @@ public class GameController : MonoBehaviour {
                 }
             }
         }
-        //// END MOVEMENT
+        //// END DETECT
 
         //// BEGIN CAPTURE
 
         bool didCapture = false;
 
-        if (fromp.y - top.y == 0)
+        if (fromp.y - top.y == 0 && Mathf.Abs(fromp.x - top.x) == 1)
         {
             for (int i = 0; i < 3; ++i)
             {
@@ -525,7 +676,7 @@ public class GameController : MonoBehaviour {
                 }
             }
         }
-        if (fromp.x - top.x == 0)
+        if (fromp.x - top.x == 0 && Mathf.Abs(fromp.y - top.y) == 1)
         {
             for (int i = 0; i < 3; ++i)
             {
@@ -616,7 +767,6 @@ public class GameController : MonoBehaviour {
 
     void playAI()
     {
-        playAgain:
         for (int y = 0; y < 3; ++y)
         {
             for (int x = 0; x < 3; ++x)
@@ -647,27 +797,7 @@ public class GameController : MonoBehaviour {
         {
             for (int x = 0; x < 3; ++x)
             {
-                if (board[y,x].renderer.material.color == Color.magenta)
-                {
-                    if (willCapture(board[y, x]))
-                    {
-                        doMove(board[y, x]);
-                        return;
-                    }
-                }
-            }
-        }
-
-        // If no valid moves, just do the first available
-        for (int y = 0; y < 3; ++y)
-        {
-            for (int x = 0; x < 3; ++x)
-            {
-                if (board[y, x].renderer.material.color == Color.magenta)
-                {
-                    doMove(board[y, x]);
-                    return;
-                }
+                if (board[y,x].renderer.material.color == Color.magenta) doMove(board[y, x]);
             }
         }
     }

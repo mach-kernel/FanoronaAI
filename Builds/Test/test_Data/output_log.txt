@@ -10,7 +10,7 @@ Platform assembly: C:\Users\David\Documents\GitHub\FanoronaAI\Builds\Test\test_D
 Loading C:\Users\David\Documents\GitHub\FanoronaAI\Builds\Test\test_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\Users\David\Documents\GitHub\FanoronaAI\Builds\Test\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\Users\David\Documents\GitHub\FanoronaAI\Builds\Test\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.222 seconds
+- Completed reload, in  0.240 seconds
 desktop: 1600x900 50Hz; virtual: 1600x900 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -21,13 +21,13 @@ LoadGUI:OnGUI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\Sta
  
 (Filename: C Line: 0)
 
-UnloadTime: 1.287840 ms
+UnloadTime: 0.963109 ms
 System memory in use before: 22.5 MB.
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 System memory in use after: 22.4 MB.
 
 Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 122.
-Total: 6.052069 ms (FindLiveObjects: 0.037768 ms CreateObjectMapping: 0.296404 ms MarkObjects: 0.637967 ms  DeleteObjects: 0.036126 ms)
+Total: 3.273585 ms (FindLiveObjects: 0.023400 ms CreateObjectMapping: 0.042284 ms MarkObjects: 0.478270 ms  DeleteObjects: 0.023400 ms)
 
 3x3: Initializing assets and drawing board.
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
@@ -40,7 +40,134 @@ Platform assembly: C:\Users\David\Documents\GitHub\FanoronaAI\Builds\Test\test_D
 Human chooses white.
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-GameController:OnGUI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:692)
+GameController:OnGUI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:739)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 1, 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 2, 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 2, 0
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 1, 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Piece selected for computer player
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:697)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 0, 1
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
@@ -66,6 +193,60 @@ UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
 UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
 UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
 UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Piece selected for computer player
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:697)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 1, 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected for computer player
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:697)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 2, 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
@@ -97,8 +278,8 @@ UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\wo
 Piece selected for computer player
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:634)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:697)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
@@ -106,26 +287,26 @@ Piece selected
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
-Selected piece is 0, 0
+Selected piece is 1, 2
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
 Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
 Piece selected for computer player
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:634)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:697)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
@@ -133,8 +314,8 @@ Piece selected
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
@@ -143,8 +324,8 @@ UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
 Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
@@ -160,7 +341,7 @@ UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\wo
  
 (Filename: C Line: 0)
 
-Selected piece is 1, 2
+Selected piece is 1, 0
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
@@ -176,8 +357,8 @@ UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\wo
 Piece selected for computer player
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:634)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:697)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
@@ -185,8 +366,8 @@ Piece selected
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
@@ -195,322 +376,8 @@ UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
 Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected for computer player
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:634)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Selected piece is 0, 0
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
-UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
-UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
- 
-(Filename: C Line: 0)
-
-Selected piece is 2, 1
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
-UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
-UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
- 
-(Filename: C Line: 0)
-
-Piece selected for computer player
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:634)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Selected piece is 0, 1
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
-UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
-UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
- 
-(Filename: C Line: 0)
-
-Selected piece is 2, 2
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
-UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
-UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
- 
-(Filename: C Line: 0)
-
-Piece selected for computer player
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:634)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Selected piece is 0, 0
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
-UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
-UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
- 
-(Filename: C Line: 0)
-
-Selected piece is 1, 2
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
-UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
-UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
- 
-(Filename: C Line: 0)
-
-Piece selected for computer player
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:634)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Selected piece is 0, 1
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
-UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
-UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
- 
-(Filename: C Line: 0)
-
-Selected piece is 2, 2
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
-UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
-UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
- 
-(Filename: C Line: 0)
-
-Piece selected for computer player
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:634)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Selected piece is 0, 0
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
-UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
-UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
- 
-(Filename: C Line: 0)
-
-Selected piece is 1, 2
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
-UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
-UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
- 
-(Filename: C Line: 0)
-
-Piece selected for computer player
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:634)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Selected piece is 0, 1
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected for computer player
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:634)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Selected piece is 0, 0
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
@@ -539,196 +406,13 @@ UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\wo
  
 (Filename: C Line: 0)
 
-Piece selected for computer player
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:634)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Selected piece is 0, 1
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
-UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
-UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
- 
-(Filename: C Line: 0)
-
-Selected piece is 2, 1
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
-UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
-UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
- 
-(Filename: C Line: 0)
-
-Piece selected for computer player
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:634)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Selected piece is 0, 0
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
-UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
-UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
- 
-(Filename: C Line: 0)
-
-Selected piece is 2, 2
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
-UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
-UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
- 
-(Filename: C Line: 0)
-
-Piece selected for computer player
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:634)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Selected piece is 0, 1
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
-UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
-UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
- 
-(Filename: C Line: 0)
-
-Selected piece is 1, 2
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
-UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
-UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
- 
-(Filename: C Line: 0)
-
-Piece selected for computer player
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:634)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Selected piece is 0, 0
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:635)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-UnloadTime: 2.540785 ms
+UnloadTime: 2.475100 ms
 System memory in use before: 22.5 MB.
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 System memory in use after: 22.4 MB.
 
 Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 127.
-Total: 3.310123 ms (FindLiveObjects: 0.028326 ms CreateObjectMapping: 0.033253 ms MarkObjects: 0.353468 ms  DeleteObjects: 0.375637 ms)
+Total: 5.428470 ms (FindLiveObjects: 0.040232 ms CreateObjectMapping: 0.050495 ms MarkObjects: 0.471291 ms  DeleteObjects: 0.654388 ms)
 
 3x3: Initializing assets and drawing board.
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
@@ -740,15 +424,15 @@ GameController:Start() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Sce
 Human chooses black.
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-GameController:OnGUI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:687)
+GameController:OnGUI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:734)
  
 (Filename: C Line: 0)
 
 Piece selected for computer player
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:640)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:703)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
@@ -756,8 +440,8 @@ Piece selected
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:641)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:704)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
@@ -766,16 +450,16 @@ UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
 Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:641)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:704)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
 Piece selected for computer player
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:640)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:703)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
@@ -783,8 +467,8 @@ Piece selected
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:641)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:704)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
@@ -793,8 +477,33 @@ UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
 Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:641)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:704)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:44)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 0, 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:44)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
  
 (Filename: C Line: 0)
 
@@ -873,11 +582,25 @@ UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\wo
  
 (Filename: C Line: 0)
 
-Piece selected for computer player
+UnloadTime: 1.696320 ms
+System memory in use before: 22.4 MB.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+System memory in use after: 22.4 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 127.
+Total: 3.377039 ms (FindLiveObjects: 0.041874 ms CreateObjectMapping: 0.046800 ms MarkObjects: 0.355110 ms  DeleteObjects: 0.362089 ms)
+
+3x3: Initializing assets and drawing board.
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:640)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:Start() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:48)
+ 
+(Filename: C Line: 0)
+
+Human chooses white.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:OnGUI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:739)
  
 (Filename: C Line: 0)
 
@@ -885,8 +608,36 @@ Piece selected
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:641)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 1, 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
  
 (Filename: C Line: 0)
 
@@ -895,16 +646,11 @@ UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
 Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:641)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected for computer player
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:640)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
  
 (Filename: C Line: 0)
 
@@ -912,26 +658,7 @@ Piece selected
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:641)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Selected piece is 1, 0
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:641)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:44)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
 UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
 UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
 UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
@@ -944,7 +671,179 @@ UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
 Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:44)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 2, 1
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+UnloadTime: 2.426657 ms
+System memory in use before: 22.5 MB.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+System memory in use after: 22.4 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 127.
+Total: 4.380381 ms (FindLiveObjects: 0.035716 ms CreateObjectMapping: 0.050495 ms MarkObjects: 0.433932 ms  DeleteObjects: 0.353878 ms)
+
+3x3: Initializing assets and drawing board.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:Start() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:48)
+ 
+(Filename: C Line: 0)
+
+Human chooses white.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:OnGUI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:739)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 1, 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 2, 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 1, 1
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 2, 0
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 1, 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
 UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
 UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
 UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
@@ -955,8 +854,8 @@ UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\wo
 Piece selected for computer player
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:640)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:697)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
@@ -964,35 +863,8 @@ Piece selected
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:641)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Selected piece is 0, 0
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:641)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected for computer player
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:640)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
- 
-(Filename: C Line: 0)
-
-Piece selected
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:641)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
@@ -1001,17 +873,408 @@ UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
 Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
-GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:641)
-GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:754)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
  
 (Filename: C Line: 0)
 
-UnloadTime: 2.111778 ms
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 0, 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Piece selected for computer player
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:697)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 1, 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 0, 1
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Piece selected for computer player
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:697)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 0, 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 1, 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Piece selected for computer player
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:697)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 0, 1
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 2, 1
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Piece selected for computer player
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:697)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 1, 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected for computer player
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:697)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 2, 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 1, 1
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Piece selected for computer player
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:697)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 1, 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected for computer player
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:697)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 0, 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 1, 0
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Piece selected for computer player
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:697)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 0, 1
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+GameController:playAI() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:698)
+GameController:Update() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:801)
+ 
+(Filename: C Line: 0)
+
+Piece selected
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:27)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+Selected piece is 2, 0
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameController:showValidMoves() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\GameController.cs:206)
+Piece:select() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:33)
+Piece:OnMouseDown() (at C:\Users\David\Documents\GitHub\FanoronaAI\Assets\Scenes\3x3\Scripts\Piece.cs:40)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:156)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\BuildAgent\work\aeedb04a1292f85a\Runtime\Export\MouseEvents.cs:138)
+ 
+(Filename: C Line: 0)
+
+UnloadTime: 3.338449 ms
 System memory in use before: 22.4 MB.
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 System memory in use after: 22.4 MB.
 
 Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 111.
-Total: 3.314639 ms (FindLiveObjects: 0.025042 ms CreateObjectMapping: 0.052548 ms MarkObjects: 0.378510 ms  DeleteObjects: 0.401911 ms)
+Total: 3.421377 ms (FindLiveObjects: 0.029558 ms CreateObjectMapping: 0.039821 ms MarkObjects: 0.380153 ms  DeleteObjects: 0.426953 ms)
 
 Waiting for finish
