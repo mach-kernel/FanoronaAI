@@ -279,6 +279,7 @@ public class GameController : MonoBehaviour {
 
         if (!captureHighlight)
         {
+            Debug.Log("No capture found for " + p.y + ", " + p.x);
             // Check to see if other pieces can capture
             for (int y = 0; y < 3; ++y)
             {
@@ -297,63 +298,62 @@ public class GameController : MonoBehaviour {
                             bool otherCapture = false;
                             if (op.y > 0 && !isOccupied(board[op.y - 1, op.x]))
                             {
-                                if (willCapture(board[op.y - 1, op.x]))
+                                if (willCapture(board[op.y - 1, op.x], board[y,x]))
                                 {
                                     otherCapture = true;
                                 }
                             }
                             if (op.y < 2 && !isOccupied(board[op.y + 1, op.x]))
                             {
-                                if (willCapture(board[op.y + 1, op.x]))
+                                if (willCapture(board[op.y + 1, op.x], board[y, x]))
                                 {
                                     otherCapture = true;
                                 }
                             }
                             if (op.x > 0 && !isOccupied(board[op.y, op.x - 1]))
                             {
-                                if (willCapture(board[op.y, op.x - 1]))
+                                if (willCapture(board[op.y, op.x - 1], board[y, x]))
                                 {
                                     otherCapture = true;
                                 }
                             }
                             if (op.x < 2 && !isOccupied(board[op.y, op.x + 1]))
                             {
-                                if (willCapture(board[op.y, op.x + 1]))
+                                if (willCapture(board[op.y, op.x + 1], board[y, x]))
                                 {
                                     otherCapture = true;
                                 }
                             }
                             if ((op.x > 0 && op.y > 0) && !isOccupied(board[op.y - 1, op.x - 1]))
                             {
-                                if (willCapture(board[op.y - 1, op.x - 1]))
+                                if (willCapture(board[op.y - 1, op.x - 1], board[y, x]))
                                 {
                                     otherCapture = true;
                                 }
                             }
                             if ((op.x > 0 && op.y < 2) && !isOccupied(board[op.y + 1, op.x - 1]))
                             {
-                                if (willCapture(board[op.y + 1, op.x - 1]))
+                                if (willCapture(board[op.y + 1, op.x - 1], board[y, x]))
                                 {
                                     otherCapture = true;
                                 }
                             }
                             if ((op.x < 2 && op.y > 0) && !isOccupied(board[op.y - 1, op.x + 1]))
                             {
-                                if (willCapture(board[op.y - 1, op.x + 1]))
+                                if (willCapture(board[op.y - 1, op.x + 1], board[y, x]))
                                 {
                                     otherCapture = true;
                                 }
                             }
                             if ((op.x < 2 && op.y < 2) && !isOccupied(board[op.y + 1, op.x + 1]))
                             {
-                                if (willCapture(board[op.y + 1, op.x + 1]))
+                                if (willCapture(board[op.y + 1, op.x + 1], board[y, x]))
                                 {
                                     otherCapture = true;
                                 }
                             }
                             if (otherCapture) return;
                         }
-
                     }
                 }
             }
@@ -508,7 +508,7 @@ public class GameController : MonoBehaviour {
                 }
             }
         }
-        if ((fromp.x - top.x > 0) && (fromp.y - top.y > 0) || (fromp.x - top.x < 0) && (fromp.y - top.y < 0))
+        if ((fromp.x - top.x == 1) && (fromp.y - top.y == 1) || (fromp.x - top.x == -1) && (fromp.y - top.y == -1))
         {
             int ty = top.y, tx = top.x;
             int ry = top.y, rx = top.x;
@@ -559,7 +559,7 @@ public class GameController : MonoBehaviour {
                 ++rx;
             }
         }
-        if ((fromp.x - top.x > 0) && (fromp.y - top.y < 0) || (fromp.x - top.x < 0) && (fromp.y - top.y > 0))
+        if ((fromp.x - top.x == -1) && (fromp.y - top.y == 1) || (fromp.x - top.x == 1) && (fromp.y - top.y == -1))
         {
             int ty = top.y, tx = top.x;
             int ry = top.y, rx = top.x;
@@ -624,21 +624,40 @@ public class GameController : MonoBehaviour {
         }
     }
 
-    bool willCapture(GameObject to)
+    bool willCapture(GameObject to, GameObject from = null)
     {
         Pos fromp = new Pos();
         Pos top = new Pos();
 
         //// BEGIN DETECT
-        for (int y = 0; y < 3; ++y)
+        if (!from)
         {
-            for (int x = 0; x < 3; ++x)
+            for (int y = 0; y < 3; ++y)
             {
-                if (board[y, x].transform.position == selectedPiece.transform.position)
+                for (int x = 0; x < 3; ++x)
                 {
-                    var fromsc = (Position)board[y, x].GetComponent("Position");
-                    fromp.x = x;
-                    fromp.y = y;
+                    if (board[y, x].transform.position == selectedPiece.transform.position)
+                    {
+                        var fromsc = (Position)board[y, x].GetComponent("Position");
+                        fromp.x = x;
+                        fromp.y = y;
+                    }
+                }
+            }
+        }
+
+        if (from)
+        {
+            for (int y = 0; y < 3; ++y)
+            {
+                for (int x = 0; x < 3; ++x)
+                {
+                    if (board[y, x].transform.position == from.transform.position)
+                    {
+                        var fromsc = (Position)board[y, x].GetComponent("Position");
+                        fromp.x = x;
+                        fromp.y = y;
+                    }
                 }
             }
         }
@@ -692,7 +711,7 @@ public class GameController : MonoBehaviour {
                 }
             }
         }
-        if ((fromp.x - top.x > 0) && (fromp.y - top.y > 0) || (fromp.x - top.x < 0) && (fromp.y - top.y < 0))
+        if ((fromp.x - top.x == 1) && (fromp.y - top.y == 1) || (fromp.x - top.x == -1) && (fromp.y - top.y == - 1))
         {
             int ty = top.y, tx = top.x;
             int ry = top.y, rx = top.x;
@@ -727,7 +746,7 @@ public class GameController : MonoBehaviour {
                 ++rx;
             }
         }
-        if ((fromp.x - top.x > 0) && (fromp.y - top.y < 0) || (fromp.x - top.x < 0) && (fromp.y - top.y > 0))
+        if ((fromp.x - top.x == -1) && (fromp.y - top.y == 1) || (fromp.x - top.x == 1) && (fromp.y - top.y == -1))
         {
             int ty = top.y, tx = top.x;
             int ry = top.y, rx = top.x;
@@ -777,14 +796,15 @@ public class GameController : MonoBehaviour {
                     var gpscr = (Piece)poscr.gamePiece.GetComponent("Piece");
                     if (gpscr.pieceType == Piece.PT.BLACK && humanPlayer == PT.WHITE)
                     {
-                        Debug.Log("Piece selected for computer player");
+                        Debug.Log("AI selected piece, calculating moves.");
                         gpscr.select();
-                        for (int yp = 0; y < 3; ++y)
+                        for (int yp = 0; yp < 3; ++yp)
                         {
-                            for (int xp = 0; x < 3; ++x)
+                            for (int xp = 0; xp < 3; ++xp)
                             {
                                 if (board[yp, xp].renderer.material.color == Color.magenta)
                                 {
+                                    Debug.Log("AI Played.");
                                     doMove(board[yp, xp]);
                                     return;
                                 }
@@ -794,14 +814,15 @@ public class GameController : MonoBehaviour {
                     }
                     else if (gpscr.pieceType == Piece.PT.WHITE && humanPlayer == PT.BLACK)
                     {
-                        Debug.Log("Piece selected for computer player");
+                        Debug.Log("AI selected piece, calculating moves.");
                         gpscr.select();
-                        for (int yp = 0; y < 3; ++y)
+                        for (int yp = 0; yp < 3; ++yp)
                         {
-                            for (int xp = 0; x < 3; ++x)
+                            for (int xp = 0; xp < 3; ++xp)
                             {
                                 if (board[yp, xp].renderer.material.color == Color.magenta)
                                 {
+                                    Debug.Log("AI Played.");
                                     doMove(board[yp, xp]);
                                     return;
                                 }
