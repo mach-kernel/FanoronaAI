@@ -779,25 +779,37 @@ public class GameController : MonoBehaviour {
                     {
                         Debug.Log("Piece selected for computer player");
                         gpscr.select();
-                        goto doCap;
+                        for (int yp = 0; y < 3; ++y)
+                        {
+                            for (int xp = 0; x < 3; ++x)
+                            {
+                                if (board[yp, xp].renderer.material.color == Color.magenta)
+                                {
+                                    doMove(board[yp, xp]);
+                                    return;
+                                }
+                            }
+                        }
+                        clearSelect();
                     }
                     else if (gpscr.pieceType == Piece.PT.WHITE && humanPlayer == PT.BLACK)
                     {
                         Debug.Log("Piece selected for computer player");
                         gpscr.select();
-                        goto doCap;
+                        for (int yp = 0; y < 3; ++y)
+                        {
+                            for (int xp = 0; x < 3; ++x)
+                            {
+                                if (board[yp, xp].renderer.material.color == Color.magenta)
+                                {
+                                    doMove(board[yp, xp]);
+                                    return;
+                                }
+                            }
+                        }
+                        clearSelect();
                     }
                 }
-            }
-        }
-
-        doCap:
-        // Check for valid moves
-        for (int y = 0; y < 3; ++y)
-        {
-            for (int x = 0; x < 3; ++x)
-            {
-                if (board[y,x].renderer.material.color == Color.magenta) doMove(board[y, x]);
             }
         }
     }
