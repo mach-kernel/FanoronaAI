@@ -24,6 +24,8 @@ public class GameController : MonoBehaviour {
     // Stats labels
     public string curTurnL = "n/a";
     public int turnCount = 0;
+    public int noBlack = 4;
+    public int noWhite = 4;
 
     // Turn logic
     public PT humanPlayer = PT.UNCHOSEN;
@@ -203,15 +205,11 @@ public class GameController : MonoBehaviour {
 
         Debug.Log("Selected piece is " + p.y + ", " + p.x);
 
-        if (p.x == -1 || p.y == -1)
-        {
-            // Lose condition
-        }
-
         // START HIGHLIGHT VALID SPACES
         if (p.y > 0 && !((Position)board[p.y - 1, p.x].GetComponent("Position")).gamePiece)
         {
             board[p.y - 1, p.x].renderer.material.color = Color.magenta;
+            if (!willCapture(board[p.y - 1, p.x]) board[p.y - 1, p.x].renderer.material.color = Color.black;
         }
         if (p.y < 2 && !((Position)board[p.y + 1, p.x].GetComponent("Position")).gamePiece)
         {
@@ -308,6 +306,9 @@ public class GameController : MonoBehaviour {
         //// END MOVEMENT
 
         //// BEGIN CAPTURE
+
+        bool didCapture = false;
+
         if (fromp.y - top.y == 0)
         {
             for (int i = 0; i < 3; ++i)
@@ -321,6 +322,13 @@ public class GameController : MonoBehaviour {
                     {
                         Destroy(csc.gamePiece);
                         csc.gamePiece = null;
+                        didCapture = true;
+
+                        if (cscGPC.pieceType == Piece.PT.WHITE)
+                        {
+                            --noWhite;
+                        }
+                        else { --noBlack; }
                     }
                 }
             }
@@ -338,6 +346,13 @@ public class GameController : MonoBehaviour {
                     {
                         Destroy(csc.gamePiece);
                         csc.gamePiece = null;
+                        didCapture = true;
+
+                        if (cscGPC.pieceType == Piece.PT.WHITE)
+                        {
+                            --noWhite;
+                        }
+                        else { --noBlack; }
                     }
                 }
             }
@@ -357,6 +372,13 @@ public class GameController : MonoBehaviour {
                     {
                         Destroy(csc.gamePiece);
                         csc.gamePiece = null;
+                        didCapture = true;
+
+                        if (cscGPC.pieceType == Piece.PT.WHITE)
+                        {
+                            --noWhite;
+                        }
+                        else { --noBlack; }
                     }
                 }
                 --ty;
@@ -373,6 +395,13 @@ public class GameController : MonoBehaviour {
                     {
                         Destroy(csc.gamePiece);
                         csc.gamePiece = null;
+                        didCapture = true;
+
+                        if (cscGPC.pieceType == Piece.PT.WHITE)
+                        {
+                            --noWhite;
+                        }
+                        else { --noBlack; }
                     }
                 }
                 ++ry;
@@ -380,6 +409,139 @@ public class GameController : MonoBehaviour {
             }
         }
         if ((fromp.x - top.x > 0) && (fromp.y - top.y < 0) || (fromp.x - top.x < 0) && (fromp.y - top.y > 0))
+        {
+            int ty = top.y, tx = top.x;
+            int ry = top.y, rx = top.x;
+            while (ty >= 0 && tx <= 2)
+            {
+                var csc = (Position)board[ty, tx].GetComponent("Position");
+                if (csc.gamePiece)
+                {
+                    var cscGPC = (Piece)csc.gamePiece.GetComponent("Piece");
+                    var gpGPC = (Piece)selectedPiece.GetComponent("Piece");
+                    if (cscGPC.pieceType != gpGPC.pieceType)
+                    {
+                        Destroy(csc.gamePiece);
+                        csc.gamePiece = null;
+                        didCapture = true;
+
+                        if (cscGPC.pieceType == Piece.PT.WHITE)
+                        {
+                            --noWhite;
+                        }
+                        else { --noBlack; }
+                    }
+                }
+                --ty;
+                ++tx;
+            }
+            while (ry <= 2 && rx >= 0)
+            {
+                var csc = (Position)board[ry, rx].GetComponent("Position");
+                if (csc.gamePiece)
+                {
+                    var cscGPC = (Piece)csc.gamePiece.GetComponent("Piece");
+                    var gpGPC = (Piece)selectedPiece.GetComponent("Piece");
+                    if (cscGPC.pieceType != gpGPC.pieceType)
+                    {
+                        Destroy(csc.gamePiece);
+                        csc.gamePiece = null;
+                        didCapture = true;
+
+                        if (cscGPC.pieceType == Piece.PT.WHITE)
+                        {
+                            --noWhite;
+                        }
+                        else { --noBlack; }
+                    }
+                }
+                ++ry;
+                --rx;
+            }
+        }
+        //// END CAPTURE
+
+        clearSelect();
+
+        turnInProgress = false;
+
+        if (!didCapture)
+        {
+            currentTurn = currentTurn == PT.BLACK ? PT.WHITE : PT.BLACK;
+            turnInProgress = false;
+            ++turnCount;
+        }
+    }
+
+    bool willCapture(GameObject to)
+    {
+        Pos fromp = new Pos();
+        Pos top = new Pos();
+
+        //// BEGIN MOVEMENT
+        for (int y = 0; y < 3; ++y)
+        {
+            for (int x = 0; x < 3; ++x)
+            {
+                if (board[y, x].transform.position == selectedPiece.transform.position)
+                {
+                    var fromsc = (Position)board[y, x].GetComponent("Position");
+                    fromp.x = x;
+                    fromp.y = y;
+                }
+            }
+        }
+
+        for (int y = 0; y < 3; ++y)
+        {
+            for (int x = 0; x < 3; ++x)
+            {
+                if (board[y, x].transform.position == to.transform.position)
+                {
+                    top.x = x;
+                    top.y = y;
+                }
+            }
+        }
+        //// END MOVEMENT
+
+        //// BEGIN CAPTURE
+
+        bool didCapture = false;
+
+        if (fromp.y - top.y == 0)
+        {
+            for (int i = 0; i < 3; ++i)
+            {
+                var csc = (Position)board[top.y, i].GetComponent("Position");
+                if (csc.gamePiece)
+                {
+                    var cscGPC = (Piece)csc.gamePiece.GetComponent("Piece");
+                    var gpGPC = (Piece)selectedPiece.GetComponent("Piece");
+                    if (cscGPC.pieceType != gpGPC.pieceType)
+                    {
+                        didCapture = true;
+                    }
+                }
+            }
+        }
+        if (fromp.x - top.x == 0)
+        {
+            for (int i = 0; i < 3; ++i)
+            {
+                var csc = (Position)board[i, top.x].GetComponent("Position");
+                if (csc.gamePiece)
+                {
+                    var cscGPC = (Piece)csc.gamePiece.GetComponent("Piece");
+                    var gpGPC = (Piece)selectedPiece.GetComponent("Piece");
+                    if (cscGPC.pieceType != gpGPC.pieceType)
+                    {
+                        didCapture = true;
+                    }
+                }
+            }
+        }
+        if ((fromp.x - top.x > 0) && (fromp.y - top.y > 0) || (fromp.x - top.x < 0) && (fromp.y - top.y < 0))
         {
             int ty = top.y, tx = top.x;
             int ry = top.y, rx = top.x;
@@ -392,14 +554,13 @@ public class GameController : MonoBehaviour {
                     var gpGPC = (Piece)selectedPiece.GetComponent("Piece");
                     if (cscGPC.pieceType != gpGPC.pieceType)
                     {
-                        Destroy(csc.gamePiece);
-                        csc.gamePiece = null;
+                        didCapture = true;
                     }
                 }
                 --ty;
-                ++tx;
+                --tx;
             }
-            while (ry <= 2 && rx <= 2)
+            while (rx <= 2 && ry <= 2)
             {
                 var csc = (Position)board[ry, rx].GetComponent("Position");
                 if (csc.gamePiece)
@@ -408,35 +569,105 @@ public class GameController : MonoBehaviour {
                     var gpGPC = (Piece)selectedPiece.GetComponent("Piece");
                     if (cscGPC.pieceType != gpGPC.pieceType)
                     {
-                        Destroy(csc.gamePiece);
-                        csc.gamePiece = null;
+                        didCapture = true;
+                    }
+                }
+                ++ry;
+                ++rx;
+            }
+        }
+        if ((fromp.x - top.x > 0) && (fromp.y - top.y < 0) || (fromp.x - top.x < 0) && (fromp.y - top.y > 0))
+        {
+            int ty = top.y, tx = top.x;
+            int ry = top.y, rx = top.x;
+            while (ty >= 0 && tx <= 2)
+            {
+                var csc = (Position)board[ty, tx].GetComponent("Position");
+                if (csc.gamePiece)
+                {
+                    var cscGPC = (Piece)csc.gamePiece.GetComponent("Piece");
+                    var gpGPC = (Piece)selectedPiece.GetComponent("Piece");
+                    if (cscGPC.pieceType != gpGPC.pieceType)
+                    {
+                        didCapture = true;
+                    }
+                }
+                --ty;
+                ++tx;
+            }
+            while (ry <= 2 && rx >= 0)
+            {
+                var csc = (Position)board[ry, rx].GetComponent("Position");
+                if (csc.gamePiece)
+                {
+                    var cscGPC = (Piece)csc.gamePiece.GetComponent("Piece");
+                    var gpGPC = (Piece)selectedPiece.GetComponent("Piece");
+                    if (cscGPC.pieceType != gpGPC.pieceType)
+                    {
+                        didCapture = true;
                     }
                 }
                 ++ry;
                 --rx;
             }
         }
-        //// END CAPTURE
-
-        clearSelect();
+        return didCapture;
     }
 
     void playAI()
     {
-        // Choose random piece
-        int randX = Random.Range(0, 2);
-        int randY = Random.Range(0, 2);
+        playAgain:
+        for (int y = 0; y < 3; ++y)
+        {
+            for (int x = 0; x < 3; ++x)
+            {
+                var poscr = (Position)board[y, x].GetComponent("Position");
+                if (poscr.gamePiece)
+                {
+                    var gpscr = (Piece)poscr.gamePiece.GetComponent("Piece");
+                    if (gpscr.pieceType == Piece.PT.BLACK && humanPlayer == PT.WHITE)
+                    {
+                        Debug.Log("Piece selected for computer player");
+                        gpscr.select();
+                        goto doCap;
+                    }
+                    else if (gpscr.pieceType == Piece.PT.WHITE && humanPlayer == PT.BLACK)
+                    {
+                        Debug.Log("Piece selected for computer player");
+                        gpscr.select();
+                        goto doCap;
+                    }
+                }
+            }
+        }
 
-        // Select it
-        var pscr = (Piece)((Position)board[randY, randX].GetComponent("Position")).gamePiece.GetComponent("Piece");
-        pscr.select();
-
+        doCap:
         // Check for valid moves
         for (int y = 0; y < 3; ++y)
         {
             for (int x = 0; x < 3; ++x)
             {
+                if (board[y,x].renderer.material.color == Color.magenta)
+                {
+                    if (willCapture(board[y, x]))
+                    {
+                        doMove(board[y, x]);
+                        return;
+                    }
+                }
+            }
+        }
 
+        // If no valid moves, just do the first available
+        for (int y = 0; y < 3; ++y)
+        {
+            for (int x = 0; x < 3; ++x)
+            {
+                if (board[y, x].renderer.material.color == Color.magenta)
+                {
+                    doMove(board[y, x]);
+                    return;
+                }
             }
         }
     }
@@ -469,6 +700,37 @@ public class GameController : MonoBehaviour {
         {
             Application.LoadLevel("StartGUI");
         }
+
+        if (noWhite == 0)
+        {
+            clearSelect();
+            turnInProgress = true;
+
+            GUI.Box(new Rect((Screen.width / 2) - 100, (Screen.height / 2) - 100, 200, 125), "BLACK WINS");
+            if (GUI.Button(new Rect((Screen.width / 2) - 75, (Screen.height / 2) - 65, 150, 25), "Restart?"))
+            {
+                Application.LoadLevel("3x3");
+            }
+            if (GUI.Button(new Rect((Screen.width / 2) - 75, (Screen.height / 2) - 25, 150, 25), "Main Menu"))
+            {
+                Application.LoadLevel("StartGUI");
+            }
+        }
+        if (noBlack == 0)
+        {
+            clearSelect();
+            turnInProgress = true;
+
+            GUI.Box(new Rect((Screen.width / 2) - 100, (Screen.height / 2) - 100, 200, 125), "WHITE WINS");
+            if (GUI.Button(new Rect((Screen.width / 2) - 75, (Screen.height / 2) - 65, 150, 25), "Restart?"))
+            {
+                Application.LoadLevel("3x3");
+            }
+            if (GUI.Button(new Rect((Screen.width / 2) - 75, (Screen.height / 2) - 25, 150, 25), "Main Menu"))
+            {
+                Application.LoadLevel("StartGUI");
+            }
+        }
     }
 	
 	// Update is called once per frame
@@ -482,11 +744,10 @@ public class GameController : MonoBehaviour {
 
         curTurnL = humanPlayer == currentTurn ? "Human" : "Computer";
 
-        if ((currentTurn != humanPlayer) && !turnInProgress)
+        if ((currentTurn != humanPlayer) && !turnInProgress && humanPlayer != PT.UNCHOSEN)
         {
             turnInProgress = true;
             playAI();
-        }
-			
+        }	
 	}
 }
