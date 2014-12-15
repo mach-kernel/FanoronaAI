@@ -18,7 +18,7 @@ public class LoadGUI : MonoBehaviour {
 
 		// Draw main box
 		GUI.Box(new Rect((x/2) - 200, (y/2) - 250, 400, 400), "Fanorona!");
-        GUI.Label(new Rect((x / 2) - 198, (y / 2) + 130, 400, 400), "(C) David Stancu 2014");
+        GUI.Label(new Rect((x / 2) - 198, (y / 2) + 130, 400, 400), "By: David Stancu, 2014, for AI Final Project");
 
 		if (GUI.Button(new Rect((x/2) - 175, (y/2) - 125, 350, 50), "Play 3x3"))
 		{
@@ -27,7 +27,8 @@ public class LoadGUI : MonoBehaviour {
 		}
 		if (GUI.Button(new Rect((x/2) - 175, (y/2) - 50, 350, 50), "Play 5x5"))
 		{
-			//
+            Debug.Log("Loading 5x5 board.");
+            Application.LoadLevel("5x5");
 		}
 		if (GUI.Button(new Rect((x/2) - 175, (y/2) + 25, 350, 50), "Quit"))
 		{
